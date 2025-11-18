@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration</h1>
+    <form id="registrationForm" method="POST" action="submit.php">
+      <label>Full Name *</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
+
+      <label>Email Address *</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" id="phone" placeholder="Enter 10-digit phone number" pattern="[0-9]{10}" required>
+
+      <label>Date of Birth *</label>
+      <input type="date" name="dob" id="dob" required>
+
+      <label>Gender *</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="gender" value="Male" required> Male
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="gender" value="Female" required> Female
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="gender" value="Other" required> Other
+        </label>
+      </div>
+
+      <label>Course *</label>
+      <select name="course" id="course" required>
+        <option value="">Select a course</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Civil Engineering">Civil Engineering</option>
+        <option value="Business Administration">Business Administration</option>
+      </select>
+
+      <label>Address *</label>
+      <textarea name="address" id="address" rows="3" placeholder="Enter your address" required></textarea>
+
+      <button type="submit" id="submitBtn">SUBMIT REGISTRATION</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
